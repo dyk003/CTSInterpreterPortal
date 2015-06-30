@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setBuiltInZoomControls(true);
-  //      myWebView.setWebViewClient(new MyWebViewClient());
+        myWebView.setWebViewClient(new MyWebViewClient());
     }
 
     @Override
@@ -60,8 +60,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onPageFinished(WebView view, String url) {
-            view.loadUrl("javascript:document.getElementById('ctl00$ContentPlaceHolder1$txtUser')[0]." +
-                    "value=7509;");
+            view.loadUrl("javascript:document.getElementById('ctl00_ContentPlaceHolder1_" +
+                    "txtUser').value=7509;");
+            view.loadUrl("javascript:document.getElementById('ctl00_ContentPlaceHolder1_" +
+                    "txtPassword').value=6232038;");
+            view.loadUrl("javascript:document.getElementById('ctl00_ContentPlaceHolder1_" +
+                    "btnLogin').click();");
         }
     }
 }
