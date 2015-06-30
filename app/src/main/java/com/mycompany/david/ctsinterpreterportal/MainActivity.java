@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
             view.loadUrl("javascript:document.getElementById('ctl00_ContentPlaceHolder1_" +
                     "txtPassword').value=6232038;");
             view.loadUrl("javascript:document.getElementById('ctl00_ContentPlaceHolder1_" +
-                    "btnLogin').click();");
+                    "txtPassword').focus();");
+//            view.loadUrl("javascript:document.getElementById('ctl00_ContentPlaceHolder1_" +
+//                    "btnLogin').click();");
         }
     }
 }
